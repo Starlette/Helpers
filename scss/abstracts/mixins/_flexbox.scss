@@ -87,12 +87,32 @@
 	flex-wrap: $value;
 }
 
-@mixin flex-flow( $values: (row nowrap) ) {
+/**
+ * How to use:
+ * @include flex-flow(row wrap);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow
+ * 
+ * Options:
+ * --- row wrap
+ * --- row-reverse nowrap
+ * --- column wrap-reverse
+ * --- column wrap
+ */
+@mixin flex-flow( $values: (row wrap) ) {
 	-webkit-flex-flow: $values;
 	-ms-flex-flow: $values;
 	flex-flow: $values;
 }
 
+/**
+ * How to use:
+ * @include order(1);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/order
+ */
 @mixin order( $int: 0 ) {
 	-webkit-box-ordinal-group: $int + 1;
 	-moz-box-ordinal-group: $int + 1;
@@ -101,6 +121,13 @@
 	order: $int;
 }
 
+/**
+ * How to use:
+ * @include flex-grow(1);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
+ */
 @mixin flex-grow( $int: 1 ) {
 	-webkit-box-flex: $int;
 	-moz-box-flex: $int;
@@ -109,6 +136,13 @@
 	flex-grow: $int;
 }
 
+/**
+ * How to use:
+ * @include flex-shrink(1);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
+ */
 @mixin flex-shrink( $int: 0 ) {
 	-webkit-flex-shrink: $int;
 	-moz-flex-shrink: $int;
@@ -116,11 +150,30 @@
 	flex-shrink: $int;
 }
 
+/**
+ * How to use:
+ * @include flex-basis(auto);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
+ * 
+ * Options:
+ * --- auto
+ * --- 0 (example: any integer amount)
+ * --- 200px (example: any size amount)
+ */
 @mixin flex-basis( $value: auto ) {
 	-webkit-flex-basis: $value;
 	flex-basis: $value;
 }
 
+/**
+ * How to use:
+ * @include flex(1 1 100px);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+ */
 @mixin flex( $fg: 1, $fs: 0, $fb: auto ) {
 	$fg-boxflex: $fg;
 	@if type-of($fg) == 'list' {
@@ -133,6 +186,21 @@
 	flex: $fg $fs $fb;
 }
 
+/**
+ * How to use:
+ * @include justify-content(flex-start);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+ * 
+ * Options:
+ * --- flex-start
+ * --- flex-end
+ * --- center
+ * --- space-between
+ * --- space-around
+ * --- space-evenly
+ */
 @mixin justify-content( $value: flex-start ) {
 	@if $value == flex-start {
 	  	-webkit-box-pack: start;
@@ -157,10 +225,26 @@
 	justify-content: $value;
 }
 
-@mixin justify-content-between() {
+/**
+ * How to use:
+ * @include justify-content-between;
+ */
+@mixin justify-content-between {
     @include justify-content( space-between );
 }
 
+/**
+ * How to use:
+ * @include align-items(flex-start);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/align-items
+ * 
+ * Options:
+ * --- flex-start
+ * --- flex-end
+ * --- center
+ */
 @mixin align-items( $value: stretch ) {
 	@if $value == flex-start {
 	  	-webkit-box-align: start;
@@ -179,14 +263,36 @@
 	align-items: $value;
 }
 
+/**
+ * How to use:
+ * @include align-items-start;
+ */
 @mixin align-items-start {
 	@include align-items( flex-start );
 }
 
+/**
+ * How to use:
+ * @include align-items-end;
+ */
 @mixin align-items-end {
 	@include align-items( flex-end );
 }
 
+/**
+ * How to use:
+ * @include align-self(auto);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/align-self
+ * 
+ * Options:
+ * --- auto
+ * --- normal
+ * --- flex-start
+ * --- flex-end
+ * --- center
+ */
 @mixin align-self( $value: auto ) {
 	-webkit-align-self: $value;
 	@if $value == flex-start {
@@ -199,6 +305,21 @@
 	align-self: $value;
 }
 
+/**
+ * How to use:
+ * @include align-content(flex-start);
+ * 
+ * Find out more:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
+ * 
+ * Options:
+ * --- flex-start
+ * --- flex-end
+ * --- center
+ * --- space-between
+ * --- space-around
+ * --- space-evenly
+ */
 @mixin align-content( $value: stretch ) {
 	-webkit-align-content: $value;
 	@if $value == flex-start {
@@ -211,10 +332,18 @@
 	align-content: $value;
 }
 
+/**
+ * How to use:
+ * @include align-content-start;
+ */
 @mixin align-content-start {
     @include align-content( flex-start );
 }
 
+/**
+ * How to use:
+ * @include align-content-end;
+ */
 @mixin align-content-end {
     @include align-content( flex-end );
 }
