@@ -14,7 +14,9 @@ A group of mixins, functions and variables to get your frontend project started.
 
 ### Installation
 
-`npm install starlette-sass-helpers`
+```cmd
+npm install starlette-sass-helpers
+```
 
 ### Usage
 
