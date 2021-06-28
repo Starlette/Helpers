@@ -24,7 +24,7 @@ For example, if your sass file is located at "/assets/sass/layout.scss" then the
 
 ### Breakpoints
 
-```
+```scss
 body {
     @include breakpoint(sm) { 
         color: green;
