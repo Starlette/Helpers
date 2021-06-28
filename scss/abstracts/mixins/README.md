@@ -2,6 +2,13 @@
 
 See [how flexbox works](https://developer.mozilla.org/en-US/docs/Glossary/Flexbox). 
 
+```scss
+body {
+    @include flexbox;
+    @include flex-direction( column );
+}
+```
+
 # Breakpoints
 
 ```scss
