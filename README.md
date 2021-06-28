@@ -20,13 +20,17 @@ A group of mixins, functions and variables to get your frontend project started.
 
 Include the following "import" in your sass files. 
 
-`@import "path/to/your/node_modules/starlette-sass-helpers/scss/abstracts/abstracts";`
+```scss
+@import "path/to/your/node_modules/starlette-sass-helpers/scss/abstracts/abstracts";
+```
 
 Remember to change out "path/to/your/" to match your folder structure.
 
 For example, if your sass file is located at "/assets/sass/layout.scss" then the code would change to this:
 
-`@import "../../node_modules/starlette-sass-helpers/scss/abstracts/abstracts";`
+```scss
+@import "../../node_modules/starlette-sass-helpers/scss/abstracts/abstracts";
+```
 
 ## Examples
 
