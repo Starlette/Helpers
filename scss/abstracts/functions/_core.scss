@@ -1,12 +1,15 @@
 @function map-next-value( $current-value, $map-array ) {
     // get current key from list
 	$map-array-keys: map-keys( $map-array );
+	$current-value-index: index( $map-array-keys, $current-value );
 
 	// find index of current value and add 1
-	$next-value-index: ( index( $map-array-keys, $current-value) ) + 1;
+	$next-value-index: $current-value-index + 1;
 
 	// get value from list with new index
-	$next-value: nth( $map-array-keys, $next-value-index );
+	$next-value-key: nth( $map-array-keys, $next-value-index );
+	$next-value: map-get( $map-array, $next-value-key );
 
+	// Return value
 	@return $next-value;
 }

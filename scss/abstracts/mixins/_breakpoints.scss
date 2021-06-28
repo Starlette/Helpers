@@ -25,16 +25,10 @@
  */
 @mixin breakpoint( $breakpoint: md, $direction: min ) {
 	$breakpoint-value: map-get($breakpoints, $breakpoint);
-	$direction-options: map-values( $breakpoint-directions );
-	
-	// Throw error if $direction is invalid
-	@if map-has-key( $breakpoint-directions, $direction ) {
-		@include error-invalid-argument( $direction, $direction-options );
-	}
 
 	// Create media query if there are no errors
 	// Starting with a specific breakpoint key (eg. sm, md, lg
-	@else if map-has-key( $breakpoints, $breakpoint ) {
+	@if map-has-key( $breakpoints, $breakpoint ) {
 		@if $direction == max {
 			@media (max-width: ($breakpoint-value - 1)) {
 				@content;
@@ -44,7 +38,7 @@
 				@content;
 			}
 		} @else if $direction == between {      
-			$breakpoint-next-value: map-next-value( $breakpoint-value, $breakpoints );
+			$breakpoint-next-value: map-next-value( $breakpoint, $breakpoints );
 			@media (min-width: $breakpoint-value) and (max-width: ($breakpoint-next-value - 1)) {
 				@content;
 			}

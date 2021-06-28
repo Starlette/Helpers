@@ -1,6 +1,6 @@
 {
   "name": "starlette-sass-helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A group of mixins, functions and variables to get your frontend project started",
   "main": "index.js",
   "scripts": {
