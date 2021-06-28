@@ -1,5 +1,13 @@
 # Sass Helpers
 
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  * [Installation](#installation)
+  * [Usage](#usage)
+- [Examples](#examples)
+  * [Breakpoints](#breakpoints)
+
 A group of mixins, functions and variables to get your frontend project started.
 
 ## Getting Started
