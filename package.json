@@ -1,0 +1,23 @@
+{
+  "name": "starlette-sass-helpers",
+  "version": "1.0.0",
+  "description": "A group of mixins, functions and variables to get your frontend project started",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Starlette/Helpers.git"
+  },
+  "keywords": [
+    "Sass",
+    "SCSS"
+  ],
+  "author": "Chantelle Bradley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Starlette/Helpers/issues"
+  },
+  "homepage": "https://github.com/Starlette/Helpers#readme"
+}
