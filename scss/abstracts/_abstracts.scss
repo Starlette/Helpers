@@ -1,10 +1,12 @@
 // Variables (import first)
-@import "variables/breakpoints";
+@import 'variables/breakpoints';
+@import 'variables/grid';
 
 // Functions
-@import "functions/core"; // load 1st
+@import 'functions/core'; // load 1st
 
 // Mixins
-@import "mixins/core"; // load 1st
-@import "mixins/flexbox";
-@import "mixins/breakpoints";
+@import 'mixins/core'; // load 1st
+@import 'mixins/flexbox';
+@import 'mixins/breakpoints';
+@import 'mixins/grid';

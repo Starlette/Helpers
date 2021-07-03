@@ -1,0 +1,14 @@
+@each $column-size in $grid-columns-parts {
+
+    $single-column-width: math.div(100%, 24);
+    $column-width: $single-column-width*$column-size;
+
+    @include grid-class-selectors( $column-size, $column-width );
+}
+
+@each $column-size in $grid-columns-percentage {
+    
+    $column-width: #{$column-size}#{'%'};
+
+    @include grid-class-selectors( $column-size, $column-width );
+}
