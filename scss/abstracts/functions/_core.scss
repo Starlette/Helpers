@@ -1,4 +1,13 @@
+/**
+ * Gets the next value in an array based on selected value
+ * 
+ * @param mixed $current-value
+ * @param map $map-array
+ * 
+ * @return mixed
+ */
 @function map-next-value( $current-value, $map-array ) {
+
     // get current key from list
 	$map-array-keys: map-keys( $map-array );
 	$current-value-index: index( $map-array-keys, $current-value );
