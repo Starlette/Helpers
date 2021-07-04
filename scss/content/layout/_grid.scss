@@ -11,13 +11,18 @@
     @include grid-class-selectors( $column-size, $column-width );
 }
 
+[class^="#{$grid-column-class-name}-"],
+[class*=" #{$grid-column-class-name}-"] {
+    padding-right: $gutter-size;
+    padding-left: $gutter-size;
 
-/**
- * Percentage grid (eg 25, 33, 50...)
- */
-@each $column-size in $grid-columns-percentage {
-    
-    $column-width: #{$column-size}#{'%'};
+    .show-guidelines & {
+        background-color: rgba(cyan, 0.2);
+        border-left: solid 1px cyan;
+        background-clip: content-box;
 
-    @include grid-class-selectors( $column-size, $column-width );
+        &:last-child {
+            border-right: solid 1px cyan;
+        }
+    }
 }
