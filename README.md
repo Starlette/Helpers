@@ -7,6 +7,8 @@
   * [Usage](#usage)
 - [Examples](#examples)
   * [Breakpoints](#breakpoints)
+  * [Flexbox](#flexbox)
+  * [Grid](#grid)
 
 A group of mixins, functions and variables to get your frontend project started.
 
@@ -91,6 +93,8 @@ body {
 }
 ```
 
+![New Feature](https://user-images.githubusercontent.com/19154356/124391000-9c725d80-dcee-11eb-953f-4044ca557752.png)
+
 ### Grid
 
 Uses a 24 grid column structure.
@@ -131,6 +135,7 @@ Uses a 24 grid column structure.
 ```
 
 #### Responsive
+<<<<<<< HEAD
 
 ```html
 <div class="container">
@@ -153,3 +158,5 @@ Uses a 24 grid column structure.
 	</div>
 </div>
 ```
+=======
+>>>>>>> b093a92ff889d2ceb797b86c51dd5340c91f104f
