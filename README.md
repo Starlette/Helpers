@@ -91,15 +91,13 @@ body {
 }
 ```
 
-### Grid
+### ![New Feature](https://user-images.githubusercontent.com/19154356/124391000-9c725d80-dcee-11eb-953f-4044ca557752.png) Grid
 
-**(new)** 24 grid column structure added.
-
-#### Columns
+Uses a 24 grid column structure.
 
 `column-1` is the smallest size column (4.16%).
 
-![](https://user-images.githubusercontent.com/19154356/124390875-e27af180-dced-11eb-8b3f-4bc54bfd400c.PNG)
+![](https://user-images.githubusercontent.com/19154356/124390915-22da6f80-dcee-11eb-859b-6268b143a8e9.png)
 
 ```html
 <div class="container">
