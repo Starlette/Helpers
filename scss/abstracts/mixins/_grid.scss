@@ -1,13 +1,13 @@
 @mixin grid-class-selectors( $class-name, $grid-size ) {
     
     // (example) .column-2
-    .#{$grid-column-class-name}-#{$column-size} {
-        width: $column-width;
+    .#{$grid-column-class-name}-#{$class-name} {
+        width: $grid-size;
     }
 
     // (example) .offset-column-2
-    .#{$grid-column-offset-class-name}-#{$grid-column-class-name}-#{$column-size} {
-        margin-left: $column-width;
+    .#{$grid-column-offset-class-name}-#{$grid-column-class-name}-#{$class-name} {
+        margin-left: $grid-size;
     }
 
     @each $breakpoint, $value in $breakpoints {

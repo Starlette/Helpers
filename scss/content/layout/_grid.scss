@@ -1,3 +1,8 @@
+@use 'sass:math';
+
+/**
+ * 24 column grid
+ */
 @each $column-size in $grid-columns-parts {
 
     $single-column-width: math.div(100%, 24);
@@ -6,6 +11,10 @@
     @include grid-class-selectors( $column-size, $column-width );
 }
 
+
+/**
+ * Percentage grid (eg 25, 33, 50...)
+ */
 @each $column-size in $grid-columns-percentage {
     
     $column-width: #{$column-size}#{'%'};

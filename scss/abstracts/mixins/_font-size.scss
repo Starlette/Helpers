@@ -6,7 +6,7 @@
  */
 @mixin font-size( $min, $max ) {
 
-    $base-size: strip-units($default-font-size);
+    $base-size: strip-units($base-size);
 
     $min-vw: map-get($breakpoints, sm);
     $max-vw: map-get($breakpoints, xl);
@@ -23,13 +23,16 @@
     }
     
     $responsive: calc(#{$min-no-unit}px + (#{$max-no-unit} - #{$min-no-unit}) * ((100vw - #{$min-vw}) / (#{$max-vw-no-unit} - #{$min-vw-no-unit})));
-    font-size: $responsive;
+
+    $responsive-font-size: calc(#{$min-no-unit}px + (#{$max-no-unit} - #{$min-no-unit}) * ( (100vw - #{$min-vw}) / ( #{$max-vw-no-unit} - #{$min-vw-no-unit})));
+
+    font-size: $responsive-font-size;
   
     @media screen and (max-width: #{$min-vw}) { 
-        font-size: $min; 
+        font-size: #{$min}px;
     }
 
     @media screen and (min-width: #{$max-vw}) { 
-        font-size: $max; 
+        font-size: #{$max}px;
     }
 }
