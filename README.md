@@ -23,7 +23,7 @@ npm install starlette-sass-helpers
 Include the following "import" in your sass files. 
 
 ```scss
-@import "path/to/your/node_modules/starlette-sass-helpers/scss/abstracts/abstracts";
+@import "path/to/your/node_modules/starlette-sass-helpers/scss/sass-helpers";
 ```
 
 Remember to change out "path/to/your/" to match your folder structure.
@@ -31,10 +31,10 @@ Remember to change out "path/to/your/" to match your folder structure.
 For example, if your sass file is located at "/assets/sass/layout.scss" then the code would change to this:
 
 ```scss
-@import "../../node_modules/starlette-sass-helpers/scss/abstracts/abstracts";
+@import "../../node_modules/starlette-sass-helpers/scss/sass-helpers";
 ```
 
-## Examples
+## Documentation
 
 ### Breakpoints
 
@@ -79,3 +79,57 @@ The above code compiles to this
     }
 }
 ```
+
+### Flexbox
+
+See [how flexbox works](https://developer.mozilla.org/en-US/docs/Glossary/Flexbox). 
+
+```scss
+body {
+    @include flexbox;
+    @include flex-direction( column );
+}
+```
+
+### Grid
+
+**(new)** 24 grid column structure added.
+
+#### Columns
+
+`column-1` is the smallest size column (4.16%).
+
+![](https://user-images.githubusercontent.com/19154356/124390875-e27af180-dced-11eb-8b3f-4bc54bfd400c.PNG)
+
+```html
+<div class="container">
+	<div class="row">
+		<div class="column-1"> 1 </div>
+		<div class="column-2"> 2 </div>
+		<div class="column-3"> 3 </div>
+		<div class="column-4"> 4 </div>
+		<div class="column-5"> 5 </div>
+		<div class="column-6"> 6 </div>
+		<div class="column-7"> 7 </div>
+		<div class="column-8"> 8 </div>
+		<div class="column-9"> 9 </div>
+		<div class="column-10"> 10 </div>
+		<div class="column-11"> 11 </div>
+		<div class="column-12"> 12 </div>
+		<div class="column-13"> 13 </div>
+		<div class="column-14"> 14 </div>
+		<div class="column-15"> 15 </div>
+		<div class="column-16"> 16 </div>
+		<div class="column-17"> 17 </div>
+		<div class="column-18"> 18 </div>
+		<div class="column-19"> 19 </div>
+		<div class="column-20"> 20 </div>
+		<div class="column-21"> 21 </div>
+		<div class="column-22"> 22 </div>
+		<div class="column-23"> 23 </div>
+		<div class="column-24"> 24 </div>
+	</div>
+</div>
+```
+
+#### Responsive
