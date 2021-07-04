@@ -1,0 +1,9 @@
+@each $heading-selector, $heading-font-size in $heading-font-sizes {
+
+    $font-size-mobile: nth($heading-font-size, 1);
+    $font-size-desktop: nth($heading-font-size, 2);
+
+    #{$heading-selector} {
+        @include font-size( $font-size-mobile, $font-size-desktop );
+    }
+}

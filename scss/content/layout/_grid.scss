@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+/**
+ * 24 column grid
+ */
+@each $column-size in $grid-columns-parts {
+
+    $single-column-width: math.div(100%, 24);
+    $column-width: $single-column-width*$column-size;
+
+    @include grid-class-selectors( $column-size, $column-width );
+}
+
+[class^="#{$grid-column-class-name}-"],
+[class*=" #{$grid-column-class-name}-"] {
+    padding-right: $gutter-size;
+    padding-left: $gutter-size;
+
+    .show-guidelines & {
+        background-color: rgba(cyan, 0.2);
+        border-left: solid 1px cyan;
+        background-clip: content-box;
+
+        &:last-child {
+            border-right: solid 1px cyan;
+        }
+    }
+}
