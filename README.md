@@ -91,7 +91,7 @@ body {
 }
 ```
 
-### ![New Feature](https://user-images.githubusercontent.com/19154356/124391000-9c725d80-dcee-11eb-953f-4044ca557752.png) Grid
+### Grid
 
 Uses a 24 grid column structure.
 
@@ -131,3 +131,25 @@ Uses a 24 grid column structure.
 ```
 
 #### Responsive
+
+```html
+<div class="container">
+	<div class="row">
+		<div class="column-sm-1"> </div>
+		<div class="column-md-1"> </div>
+		<div class="column-lg-1"> </div>
+		<div class="column-xl-1"> </div>
+	</div>
+</div>
+```
+
+#### Offset
+
+```html
+<div class="container">
+	<div class="row">
+		<div class="column-1"> </div>
+		<div class="offset-column-1"> </div>
+	</div>
+</div>
+```
