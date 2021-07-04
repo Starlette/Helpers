@@ -91,7 +91,9 @@ body {
 }
 ```
 
-### ![New Feature](https://user-images.githubusercontent.com/19154356/124391000-9c725d80-dcee-11eb-953f-4044ca557752.png) Grid
+### Grid
+
+![New Feature](https://user-images.githubusercontent.com/19154356/124391000-9c725d80-dcee-11eb-953f-4044ca557752.png)
 
 Uses a 24 grid column structure.
 
