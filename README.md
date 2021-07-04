@@ -135,7 +135,6 @@ Uses a 24 grid column structure.
 ```
 
 #### Responsive
-<<<<<<< HEAD
 
 ```html
 <div class="container">
@@ -158,5 +157,3 @@ Uses a 24 grid column structure.
 	</div>
 </div>
 ```
-=======
->>>>>>> b093a92ff889d2ceb797b86c51dd5340c91f104f
