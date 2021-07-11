@@ -1,6 +1,6 @@
-## Table of Contents
+# Lilium Framework
 
-- [Table of Contents](#table-of-contents)
+- [Lilium Framework](#lilium-framework)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -9,6 +9,9 @@
   - [Flexbox](#flexbox)
   - [Fluid (Responsive) Typography](#fluid-responsive-typography)
     - [Example](#example)
+  - [Gradients](#gradients)
+    - [Background](#background)
+    - [Text](#text)
   - [Grid](#grid)
     - [Columns](#columns)
     - [Responsive](#responsive)
@@ -16,15 +19,15 @@
 
 A group of mixins, functions and variables to get your frontend project started.
 
-## Getting Started
+# Getting Started
 
-### Installation
+## Installation
 
 ```cmd
 npm install starlette-sass-helpers
 ```
 
-### Usage
+## Usage
 
 Include the following "import" in your sass files. 
 
@@ -40,9 +43,9 @@ For example, if your sass file is located at "/assets/sass/layout.scss" then the
 @import "../../node_modules/starlette-sass-helpers/scss/lilium";
 ```
 
-## Documentation
+# Documentation
 
-### Breakpoints
+## Breakpoints
 
 ```scss
 body {
@@ -86,7 +89,7 @@ The above code compiles to this
 }
 ```
 
-### Flexbox
+## Flexbox
 
 See [how flexbox works](https://developer.mozilla.org/en-US/docs/Glossary/Flexbox). 
 
@@ -99,7 +102,7 @@ body {
 
 ![New Feature](https://user-images.githubusercontent.com/19154356/124391000-9c725d80-dcee-11eb-953f-4044ca557752.png)
 
-### Fluid (Responsive) Typography
+## Fluid (Responsive) Typography
 
 | Mixin | Param 1 | Param 2 |
 |---|---|---|
@@ -111,7 +114,7 @@ When it hits the mobile breakpoint it will stay a fixed size (example below - 16
 
 The responsive size will never be smaller than the mobile font size or bigger than the desktop font size. 
 
-#### Example
+### Example
 
 ```scss
 h1 {
@@ -121,7 +124,29 @@ h1 {
 }
 ```
 
-### Grid
+## Gradients
+
+| Param 1: direction | Param 2: colors |
+|---|---|---|
+| down; up; right; left | List of colors (space separated) |
+
+### Background
+
+```scss
+body {
+    @include linear-gradient( down, red orange yellow green blue purple pink );
+}
+```
+
+### Text
+
+```scss
+h1 {
+    @include text-background-gradient( left, rgba(255,255,255,0) #444444 );
+}
+```
+
+## Grid
 
 Uses a 24 grid column structure.
 
@@ -129,7 +154,7 @@ Uses a 24 grid column structure.
 
 ![](https://user-images.githubusercontent.com/19154356/124390915-22da6f80-dcee-11eb-859b-6268b143a8e9.png)
 
-#### Columns
+### Columns
 
 ```html
 <div class="container">
@@ -162,7 +187,7 @@ Uses a 24 grid column structure.
 </div>
 ```
 
-#### Responsive
+### Responsive
 
 ```html
 <div class="container">
@@ -175,7 +200,7 @@ Uses a 24 grid column structure.
 </div>
 ```
 
-#### Offset
+### Offset
 
 ```html
 <div class="container">
