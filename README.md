@@ -101,9 +101,15 @@ body {
 
 ### Fluid (Responsive) Typography
 
-**Sass mixin:** font-size
-**Params - 2:** mobile font size, desktop font size
-**Returns:** a fixed mobile and desktop font size - in between the 2 breakpoints is a responsive font size that will never be bigger than the desktop size and smaller than the mobile size. 
+| Sass Mixin | Param 1          | Param 2           | Returns                                                                           |
+|------------|------------------|-------------------|-----------------------------------------------------------------------------------|
+| font-size  | Mobile font size | Desktop font size | Generated CSS that makes the element's font size responsive as the screen changes |
+
+As the screen size changes the font size will change accordingly. This all happens between the mobile and desktop breakpoints.
+
+When it hits the mobile breakpoint it will stay a fixed size (example below - 16px). Same goes for desktop (example below - 35px).
+
+The responsive size will never be smaller than the mobile font size or bigger than the desktop font size. 
 
 #### Example
 
