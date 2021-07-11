@@ -127,7 +127,7 @@ h1 {
 ## Gradients
 
 | Param 1: direction | Param 2: colors |
-|---|---|---|
+|---|---|
 | down; up; right; left | List of colors (space separated) |
 
 ### Background
