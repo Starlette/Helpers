@@ -1,14 +1,18 @@
-# Sass Helpers
-
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
-  * [Installation](#installation)
-  * [Usage](#usage)
-- [Examples](#examples)
-  * [Breakpoints](#breakpoints)
-  * [Flexbox](#flexbox)
-  * [Grid](#grid)
+	- [Installation](#installation)
+	- [Usage](#usage)
+- [Documentation](#documentation)
+	- [Breakpoints](#breakpoints)
+	- [Flexbox](#flexbox)
+	- [Fluid (Responsive) Typography](#fluid-responsive-typography)
+		- [Example](#example)
+	- [Grid](#grid)
+		- [Columns](#columns)
+		- [Responsive](#responsive)
+		- [Offset](#offset)
 
 A group of mixins, functions and variables to get your frontend project started.
 
@@ -25,7 +29,7 @@ npm install starlette-sass-helpers
 Include the following "import" in your sass files. 
 
 ```scss
-@import "path/to/your/node_modules/starlette-sass-helpers/scss/sass-helpers";
+@import "path/to/your/node_modules/starlette-sass-helpers/scss/lilium";
 ```
 
 Remember to change out "path/to/your/" to match your folder structure.
@@ -33,7 +37,7 @@ Remember to change out "path/to/your/" to match your folder structure.
 For example, if your sass file is located at "/assets/sass/layout.scss" then the code would change to this:
 
 ```scss
-@import "../../node_modules/starlette-sass-helpers/scss/sass-helpers";
+@import "../../node_modules/starlette-sass-helpers/scss/lilium";
 ```
 
 ## Documentation
@@ -95,6 +99,22 @@ body {
 
 ![New Feature](https://user-images.githubusercontent.com/19154356/124391000-9c725d80-dcee-11eb-953f-4044ca557752.png)
 
+### Fluid (Responsive) Typography
+
+**Sass mixin:** font-size
+**Params - 2:** mobile font size, desktop font size
+**Returns:** a fixed mobile and desktop font size - in between the 2 breakpoints is a responsive font size that will never be bigger than the desktop size and smaller than the mobile size. 
+
+#### Example
+
+```scss
+h1 {
+	// 16px - mobile font size
+	// 35px - desktop font size
+    @include font-size( 16px, 35px );
+}
+```
+
 ### Grid
 
 Uses a 24 grid column structure.
@@ -102,6 +122,8 @@ Uses a 24 grid column structure.
 `column-1` is the smallest size column (4.16%).
 
 ![](https://user-images.githubusercontent.com/19154356/124390915-22da6f80-dcee-11eb-859b-6268b143a8e9.png)
+
+#### Columns
 
 ```html
 <div class="container">

@@ -1,6 +1,6 @@
 {
   "name": "starlette-sass-helpers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A group of mixins, functions and variables to get your frontend project started. New feature added: 24 column grid.",
   "main": "index.js",
   "scripts": {
@@ -8,16 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Starlette/Sass-Helpers.git"
+    "url": "git+https://github.com/Starlette/Lilium-Framework.git"
   },
   "keywords": [
     "Sass",
-    "SCSS"
+    "SCSS",
+    "Framework",
+    "Grid"
   ],
   "author": "Chantelle Bradley",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Starlette/Sass-Helpers/issues"
+    "url": "https://github.com/Starlette/Lilium-Framework/issues"
   },
-  "homepage": "https://github.com/Starlette/Sass-Helpers#readme"
+  "homepage": "https://github.com/Starlette/Lilium-Framework"
 }
