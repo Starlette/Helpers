@@ -1,3 +1,10 @@
+@mixin text-background-clip {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 /**
  * Give text a pattern/background instead of a flat color
  * 
@@ -5,11 +12,14 @@
  *      Example 1: @include text-background-clip( '../assets/img/some-pattern.png' );
  *      Example 2: @include text-background-clip( '../assets/img/some-background.png', cover, no-repeat );
  */
-@mixin text-background-clip( $background-image, $background-size: auto, $background-repeat: repeat ) {
+@mixin text-background-image( $background-image, $background-size: auto, $background-repeat: repeat ) {
     background-image: url("#{$background-image}");
     background-repeat: $background-repeat;
     background-size: $background-size;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    @include text-background-clip;
+}
+
+@mixin text-background-gradient( $direction: down, $colors ) {
+    @include linear-gradient( $direction, $colors );
+    @include text-background-clip;
 }

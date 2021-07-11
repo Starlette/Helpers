@@ -9,6 +9,8 @@ $base-size: 16px; // load 1st
 @import 'variables/breakpoints';
 @import 'variables/grid';
 @import 'variables/font-size';
+@import 'variables/gradients';
+
 
 // Mixins
 @import 'mixins/core'; // load 1st
@@ -16,4 +18,5 @@ $base-size: 16px; // load 1st
 @import 'mixins/breakpoints';
 @import 'mixins/grid';
 @import 'mixins/font-size';
+@import 'mixins/gradients';
 @import 'mixins/text';
