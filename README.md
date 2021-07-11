@@ -2,17 +2,17 @@
 
 - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
-	- [Installation](#installation)
-	- [Usage](#usage)
+  - [Installation](#installation)
+  - [Usage](#usage)
 - [Documentation](#documentation)
-	- [Breakpoints](#breakpoints)
-	- [Flexbox](#flexbox)
-	- [Fluid (Responsive) Typography](#fluid-responsive-typography)
-		- [Example](#example)
-	- [Grid](#grid)
-		- [Columns](#columns)
-		- [Responsive](#responsive)
-		- [Offset](#offset)
+  - [Breakpoints](#breakpoints)
+  - [Flexbox](#flexbox)
+  - [Fluid (Responsive) Typography](#fluid-responsive-typography)
+    - [Example](#example)
+  - [Grid](#grid)
+    - [Columns](#columns)
+    - [Responsive](#responsive)
+    - [Offset](#offset)
 
 A group of mixins, functions and variables to get your frontend project started.
 
@@ -101,9 +101,9 @@ body {
 
 ### Fluid (Responsive) Typography
 
-| Sass Mixin | Param 1          | Param 2           | Returns                                                                           |
-|------------|------------------|-------------------|-----------------------------------------------------------------------------------|
-| font-size  | Mobile font size | Desktop font size | Generated CSS that makes the element's font size responsive as the screen changes |
+| Mixin | Param 1 | Param 2 |
+|---|---|---|
+| font-size | Mobile font size | Desktop font size |
 
 As the screen size changes the font size will change accordingly. This all happens between the mobile and desktop breakpoints.
 
@@ -115,8 +115,8 @@ The responsive size will never be smaller than the mobile font size or bigger th
 
 ```scss
 h1 {
-	// 16px - mobile font size
-	// 35px - desktop font size
+    // 16px - mobile font size
+    // 35px - desktop font size
     @include font-size( 16px, 35px );
 }
 ```
@@ -133,32 +133,32 @@ Uses a 24 grid column structure.
 
 ```html
 <div class="container">
-	<div class="row">
-		<div class="column-1"> 1 </div>
-		<div class="column-2"> 2 </div>
-		<div class="column-3"> 3 </div>
-		<div class="column-4"> 4 </div>
-		<div class="column-5"> 5 </div>
-		<div class="column-6"> 6 </div>
-		<div class="column-7"> 7 </div>
-		<div class="column-8"> 8 </div>
-		<div class="column-9"> 9 </div>
-		<div class="column-10"> 10 </div>
-		<div class="column-11"> 11 </div>
-		<div class="column-12"> 12 </div>
-		<div class="column-13"> 13 </div>
-		<div class="column-14"> 14 </div>
-		<div class="column-15"> 15 </div>
-		<div class="column-16"> 16 </div>
-		<div class="column-17"> 17 </div>
-		<div class="column-18"> 18 </div>
-		<div class="column-19"> 19 </div>
-		<div class="column-20"> 20 </div>
-		<div class="column-21"> 21 </div>
-		<div class="column-22"> 22 </div>
-		<div class="column-23"> 23 </div>
-		<div class="column-24"> 24 </div>
-	</div>
+    <div class="row">
+        <div class="column-1"> 1 </div>
+        <div class="column-2"> 2 </div>
+        <div class="column-3"> 3 </div>
+        <div class="column-4"> 4 </div>
+        <div class="column-5"> 5 </div>
+        <div class="column-6"> 6 </div>
+        <div class="column-7"> 7 </div>
+        <div class="column-8"> 8 </div>
+        <div class="column-9"> 9 </div>
+        <div class="column-10"> 10 </div>
+        <div class="column-11"> 11 </div>
+        <div class="column-12"> 12 </div>
+        <div class="column-13"> 13 </div>
+        <div class="column-14"> 14 </div>
+        <div class="column-15"> 15 </div>
+        <div class="column-16"> 16 </div>
+        <div class="column-17"> 17 </div>
+        <div class="column-18"> 18 </div>
+        <div class="column-19"> 19 </div>
+        <div class="column-20"> 20 </div>
+        <div class="column-21"> 21 </div>
+        <div class="column-22"> 22 </div>
+        <div class="column-23"> 23 </div>
+        <div class="column-24"> 24 </div>
+    </div>
 </div>
 ```
 
@@ -166,12 +166,12 @@ Uses a 24 grid column structure.
 
 ```html
 <div class="container">
-	<div class="row">
-		<div class="column-sm-1"> </div>
-		<div class="column-md-1"> </div>
-		<div class="column-lg-1"> </div>
-		<div class="column-xl-1"> </div>
-	</div>
+    <div class="row">
+        <div class="column-sm-1"> </div>
+        <div class="column-md-1"> </div>
+        <div class="column-lg-1"> </div>
+        <div class="column-xl-1"> </div>
+    </div>
 </div>
 ```
 
@@ -179,9 +179,9 @@ Uses a 24 grid column structure.
 
 ```html
 <div class="container">
-	<div class="row">
-		<div class="column-1"> </div>
-		<div class="offset-column-1"> </div>
-	</div>
+    <div class="row">
+        <div class="column-1"> </div>
+        <div class="offset-column-1"> </div>
+    </div>
 </div>
 ```
