@@ -1,4 +1,4 @@
-$base-size: 16px; // load 1st
+$base-size: 14px; // load 1st
 
 // Functions
 @import 'functions/core'; // load 1st
@@ -6,6 +6,7 @@ $base-size: 16px; // load 1st
 
 // Variables (import first)
 @import 'variables/settings'; // load 1st
+@import 'variables/colors';
 @import 'variables/breakpoints';
 @import 'variables/grid';
 @import 'variables/font-size';
@@ -16,7 +17,6 @@ $base-size: 16px; // load 1st
 @import 'mixins/core'; // load 1st
 @import 'mixins/flexbox';
 @import 'mixins/breakpoints';
-@import 'mixins/grid';
 @import 'mixins/font-size';
 @import 'mixins/gradients';
 @import 'mixins/text';
