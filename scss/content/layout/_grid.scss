@@ -1,20 +1,10 @@
 @use 'sass:math';
 
-/**
- * 24 column grid
- */
-@each $column-size in $grid-columns-parts {
-
-    $single-column-width: math.div(100%, 24);
-    $column-width: $single-column-width*$column-size;
-
-    @include grid-class-selectors( $column-size, $column-width );
-}
-
 [class^="#{$grid-column-class-name}-"],
 [class*=" #{$grid-column-class-name}-"] {
     padding-right: $gutter-size;
     padding-left: $gutter-size;
+    width: 100%;
 
     .show-guidelines & {
         background-color: rgba(cyan, 0.2);
@@ -25,4 +15,38 @@
             border-right: solid 1px cyan;
         }
     }
+}
+
+@each $column-size in $grid-columns-parts {
+    $single-column-width: math.div(100%, 24);
+    $column-width: $single-column-width*$column-size;
+
+    // (example) .col-2
+    .#{$grid-column-class-name}-#{$column-size} {
+      width: $column-width;
+    }
+
+    // (example) .offset-col-2
+    .#{$grid-column-offset-class-name}-#{$grid-column-class-name}-#{$column-size} {
+      margin-left: $column-width;
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint( $breakpoint, min ) {
+    @each $column-size in $grid-columns-parts {
+      $single-column-width: math.div(100%, 24);
+      $column-width: $single-column-width*$column-size;
+
+      // (example) .col-md-2
+      .#{$grid-column-class-name}-#{$breakpoint}-#{$column-size} {
+        width: $column-width;
+      }
+
+      // (example) .offset-col-md-2
+      .#{$grid-column-offset-class-name}-#{$grid-column-class-name}-#{$breakpoint}-#{$column-size} {
+        margin-left: $column-width;
+      }
+    }
+  }
 }

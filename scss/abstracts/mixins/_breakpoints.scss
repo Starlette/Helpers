@@ -1,11 +1,11 @@
 /**
  * Responsive Media Queries
- * 
+ *
  * How to use:
  * --- @include breakpoint(sm);
  * --- @include breakpoint(sm, max);
  * --- @include breakpoint(600px, max);
- * 
+ *
  * $breakpoint options:
  * --- xs
  * --- sm
@@ -14,13 +14,13 @@
  * --- xl
  * --- xxl
  * --- 600px
- * 
- * $direction options: 
+ *
+ * $direction options:
  * --- min
  * --- max
  * --- between
- * 
- * $direction "between": 
+ *
+ * $direction "between":
  * If you use this with (example) $breakpoint "md" then it will use "md" as the min width and "lg" (next breakpoint) as the max width.
  */
 @mixin breakpoint( $breakpoint: md, $direction: min ) {
@@ -33,11 +33,11 @@
 			@media (max-width: ($breakpoint-value - 1)) {
 				@content;
 			}
-		} @else if $direction == min {      
+		} @else if $direction == min {
 			@media (min-width: $breakpoint-value) {
 				@content;
 			}
-		} @else if $direction == between {      
+		} @else if $direction == between {
 			$breakpoint-next-value: map-next-value( $breakpoint, $breakpoints );
 			@media (min-width: $breakpoint-value) and (max-width: ($breakpoint-next-value - 1)) {
 				@content;
@@ -55,7 +55,7 @@
 			@media (max-width: $breakpoint) {
 				@content;
 			}
-		} @else if $direction == min {      
+		} @else if $direction == min {
 			@media (min-width: $breakpoint) {
 				@content;
 			}
@@ -65,4 +65,16 @@
 			}
 		}
 	}
+}
+
+@mixin desktop {
+  @include breakpoint(md, min) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include breakpoint(md, max) {
+    @content;
+  }
 }

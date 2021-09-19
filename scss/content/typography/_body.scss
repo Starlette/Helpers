@@ -3,13 +3,28 @@ html {
 }
 
 body {
-    font-family: "Calibri Light", Calibri, Arial, sans-serif;
-    font-size: $default-font-size;
-    // min-height: 100%;
-    padding: 0;
-    margin: 0;
+ 	font-size: $default-font-size;
+  font-family: $font;
+  line-height: 150%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  article {
+    @include font-size(12px, 14px);
+  }
 }
 
 *, ::before, ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+app-root {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+}
+
+bp-footer {
+  margin-top: auto;
 }

@@ -1,9 +1,15 @@
-@each $heading-selector, $heading-font-size in $heading-font-sizes {
+@each $heading-selector, $heading-settings in $headings {
+  $size: map-get($heading-settings, size);
+  $size-mobile: nth($size, 1);
+  $size-desktop: nth($size, 2);
+  $weight: map-get($heading-settings, weight);
+  $line-height: map-get($heading-settings, line-height);
+  $margin: map-get($heading-settings, margin);
 
-    $font-size-mobile: nth($heading-font-size, 1);
-    $font-size-desktop: nth($heading-font-size, 2);
-
-    #{$heading-selector} {
-        @include font-size( $font-size-mobile, $font-size-desktop );
-    }
+  #{$heading-selector} {
+    @include font-size( $size-mobile, $size-desktop );
+    line-height: $line-height;
+    font-weight: $weight;
+    margin: 0 0 rem($margin);
+  }
 }
