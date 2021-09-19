@@ -1,6 +1,6 @@
 {
   "name": "starlette-sass-helpers",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "description": "A group of mixins, functions and variables to get your frontend project started. New feature added: 24 column grid.",
   "main": "index.js",
   "scripts": {
