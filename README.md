@@ -2,20 +2,20 @@
 
 - [Lilium Framework](#lilium-framework)
 - [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Usage](#usage)
+	- [Installation](#installation)
+	- [Usage](#usage)
 - [Documentation](#documentation)
-  - [Breakpoints](#breakpoints)
-  - [Flexbox](#flexbox)
-  - [Fluid (Responsive) Typography](#fluid-responsive-typography)
-    - [Example](#example)
-  - [Gradients](#gradients)
-    - [Background](#background)
-    - [Text](#text)
-  - [Grid](#grid)
-    - [Columns](#columns)
-    - [Responsive](#responsive)
-    - [Offset](#offset)
+	- [Breakpoints](#breakpoints)
+	- [Flexbox](#flexbox)
+	- [Fluid (Responsive) Typography](#fluid-responsive-typography)
+		- [Example](#example)
+	- [Gradients](#gradients)
+		- [Background](#background)
+		- [Text](#text)
+	- [Grid](#grid)
+		- [Columns](#columns)
+		- [Responsive](#responsive)
+		- [Offset](#offset)
 
 A group of mixins, functions and variables to get your frontend project started.
 
@@ -96,7 +96,7 @@ See [how flexbox works](https://developer.mozilla.org/en-US/docs/Glossary/Flexbo
 ```scss
 body {
     @include flexbox;
-    @include flex-direction( column );
+    @include flex-direction( col );
 }
 ```
 
@@ -150,7 +150,7 @@ h1 {
 
 Uses a 24 grid column structure.
 
-`column-1` is the smallest size column (4.16%).
+`col-1` is the smallest size column (4.16%).
 
 ![](https://user-images.githubusercontent.com/19154356/124390915-22da6f80-dcee-11eb-859b-6268b143a8e9.png)
 
@@ -159,30 +159,30 @@ Uses a 24 grid column structure.
 ```html
 <div class="container">
     <div class="row">
-        <div class="column-1"> 1 </div>
-        <div class="column-2"> 2 </div>
-        <div class="column-3"> 3 </div>
-        <div class="column-4"> 4 </div>
-        <div class="column-5"> 5 </div>
-        <div class="column-6"> 6 </div>
-        <div class="column-7"> 7 </div>
-        <div class="column-8"> 8 </div>
-        <div class="column-9"> 9 </div>
-        <div class="column-10"> 10 </div>
-        <div class="column-11"> 11 </div>
-        <div class="column-12"> 12 </div>
-        <div class="column-13"> 13 </div>
-        <div class="column-14"> 14 </div>
-        <div class="column-15"> 15 </div>
-        <div class="column-16"> 16 </div>
-        <div class="column-17"> 17 </div>
-        <div class="column-18"> 18 </div>
-        <div class="column-19"> 19 </div>
-        <div class="column-20"> 20 </div>
-        <div class="column-21"> 21 </div>
-        <div class="column-22"> 22 </div>
-        <div class="column-23"> 23 </div>
-        <div class="column-24"> 24 </div>
+        <div class="col-1"> 1 </div>
+        <div class="col-2"> 2 </div>
+        <div class="col-3"> 3 </div>
+        <div class="col-4"> 4 </div>
+        <div class="col-5"> 5 </div>
+        <div class="col-6"> 6 </div>
+        <div class="col-7"> 7 </div>
+        <div class="col-8"> 8 </div>
+        <div class="col-9"> 9 </div>
+        <div class="col-10"> 10 </div>
+        <div class="col-11"> 11 </div>
+        <div class="col-12"> 12 </div>
+        <div class="col-13"> 13 </div>
+        <div class="col-14"> 14 </div>
+        <div class="col-15"> 15 </div>
+        <div class="col-16"> 16 </div>
+        <div class="col-17"> 17 </div>
+        <div class="col-18"> 18 </div>
+        <div class="col-19"> 19 </div>
+        <div class="col-20"> 20 </div>
+        <div class="col-21"> 21 </div>
+        <div class="col-22"> 22 </div>
+        <div class="col-23"> 23 </div>
+        <div class="col-24"> 24 </div>
     </div>
 </div>
 ```
@@ -192,10 +192,10 @@ Uses a 24 grid column structure.
 ```html
 <div class="container">
     <div class="row">
-        <div class="column-sm-1"> </div>
-        <div class="column-md-1"> </div>
-        <div class="column-lg-1"> </div>
-        <div class="column-xl-1"> </div>
+        <div class="col-sm-1"> </div>
+        <div class="col-md-1"> </div>
+        <div class="col-lg-1"> </div>
+        <div class="col-xl-1"> </div>
     </div>
 </div>
 ```
@@ -205,8 +205,8 @@ Uses a 24 grid column structure.
 ```html
 <div class="container">
     <div class="row">
-        <div class="column-1"> </div>
-        <div class="offset-column-1"> </div>
+        <div class="col-1"> </div>
+        <div class="offset-col-1"> </div>
     </div>
 </div>
 ```
